@@ -1,5 +1,30 @@
+:root {
+    --main-color: #3498db;
+    /* Primary color */
+    --secondary-color: #2ecc71;
+    /* Secondary color */
+    --font-family: 'Arial, sans-serif';
+    /* Desired font */
+    --font-size: 16px;
+    /* Default font size */
+    --heading-size: 24px;
+    /* Font size for headings */
+    --nav-background: darkblue;
+    /* Navigation background color */
+    --link-color: white;
+    /* Link color */
+    --aside-background: #eee;
+    /* Background color for aside */
+    --aside-border-color: rgba(0, 0, 0, 0.2);
+    /* Aside border color */
+    --footer-border-color: #000;
+    /* Footer border color */
+    --img-border-color: black;
+    /* Default image border color */
+}
+
 nav {
-    background-color: darkblue;
+    background-color: var(--nav-background);
     padding: 10px;
 }
 
@@ -57,3 +82,5 @@ footer {
     border-top: 1px solid var(--footer-border-color);
     text-align: center;
 }
+
+commit
