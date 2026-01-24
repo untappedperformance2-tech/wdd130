@@ -1,16 +1,41 @@
+:root {
+    --main-color: #3498db;
+    /* Primary color */
+    --secondary-color: #2ecc71;
+    /* Secondary color */
+    --font-family: 'Arial, sans-serif';
+    /* Desired font */
+    --font-size: 16px;
+    /* Default font size */
+    --heading-size: 24px;
+    /* Font size for headings */
+    --nav-background: darkblue;
+    /* Navigation background color */
+    --link-color: white;
+    /* Link color */
+    --aside-background: #eee;
+    /* Background color for aside */
+    --aside-border-color: rgba(0, 0, 0, 0.2);
+    /* Aside border color */
+    --footer-border-color: #000;
+    /* Footer border color */
+    --img-border-color: black;
+    /* Default image border color */
+}
+
 nav {
-    background-color: darkblue;
+    background-color: var(--nav-background);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: var(--link-color);
     display: block;
     padding: 20px;
 }
 
 h1 {
-    color: darkblue;
+    color: var(--main-color);
 }
 
 main {
@@ -20,7 +45,7 @@ main {
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid steelblue;
+    border: 1px solid var(--img-border-color);
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
@@ -28,9 +53,9 @@ main img {
 aside {
     width: 20em;
     margin: 1em;
-    border: 1px solid rgb(0 0 0 /0.2);
+    border: 1px solid var(--aside-border-color);
     padding: 1em;
-    background-color: #eee;
+    background-color: var(--aside-background);
     color: #333;
     text-align: center;
 }
@@ -43,7 +68,7 @@ aside img {
 img {
     width: 150px;
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--img-border-color);
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
@@ -54,6 +79,6 @@ p {
 
 footer {
     margin-top: 1em;
-    border-top: 1px solid#000;
+    border-top: 1px solid var(--footer-border-color);
     text-align: center;
 }
