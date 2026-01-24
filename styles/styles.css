@@ -21,6 +21,56 @@
     /* Footer border color */
     --img-border-color: black;
     /* Default image border color */
+
+    /* Universal Selector */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Class Selectors */
+    .box {
+        margin: 1rem;
+        border: 1px solid rgb(0 0 0 / 10%);
+        padding: 1rem;
+        background-color: #ddd;
+        /* Adjust as needed */
+        color: #000;
+        /* Adjust as needed */
+    }
+
+    aside {
+        width: 20em;
+        margin: 1em;
+        border: 1px solid var(--aside-border-color);
+        background-color: var(--aside-background);
+        color: #333;
+        text-align: center;
+        position: relative;
+        /* Required for absolute positioning of h2 */
+    }
+
+    main img {
+        float: right;
+        /* Float profile image to the right */
+        width: 150px;
+        height: auto;
+        border: 1px solid var(--img-border-color);
+        padding: 2px;
+        box-shadow: 0 0 30px gray;
+    }
+
+    aside h2 {
+        position: absolute;
+        /* For overlay */
+        top: 47px;
+        /* Adjust these values as needed */
+        left: 150px;
+        /* Adjust these values as needed */
+    }
+
+    /* Additional Styles as needed */
 }
 
 nav {
