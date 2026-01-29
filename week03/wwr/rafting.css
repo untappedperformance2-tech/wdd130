@@ -1,0 +1,142 @@
+/* ===== CSS Variables ===== */
+:root {
+    --primary-color: #055a05;
+    /* forest green */
+    --secondary-color: #f4a261;
+    /* warm sand */
+    --accent1-color: #264653;
+    /* dark slate blue */
+    --accent2-color: #e9c46a;
+    /* light golden yellow */
+    --heading-font: "Times New Roman", "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+/* ===== Page Layout ===== */
+header,
+main,
+footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+/* ===== Headings ===== */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* ===== Basic Elements ===== */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 100px;
+    /* Adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    position: relative;
+    /* Important for absolute positioning of children */
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero Heading */
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+    /* white text */
+}
+
+/* Hero Article */
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* semi-transparent white */
+    padding: 16px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Social Media Links */
+.socialmedia a {
+    text-decoration: none;
+    /* Remove underline from social media links */
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    /* Fixed this from 5px to 30px */
+    margin: 0 8px;
+    transition: transform 0.2s;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Additional Styling ===== */
+
+/* For the article image inside main (not in hero) */
+article img {
+    max-width: 100%;
+    height: auto;
+}
