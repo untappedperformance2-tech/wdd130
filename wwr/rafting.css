@@ -1,27 +1,27 @@
-/* ===== CSS Variables ===== */
+/* CSS VARIABLES */
 :root {
-    --primary-color: #055a05;
-    --secondary-color: #f4a261;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --primary-color: #396e94;
+    --secondary-color: #e7c24f;
+    --accent1-color: #a43312;
+    --accent2-color: #381d2a;
+    --heading-font: "Times New Roman", serif;
+    --body-font: Arial, sans-serif;
 }
 
-/* ===== Universal Selector Reset ===== */
+/* UNIVERSAL RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== Body ===== */
+/* BODY */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
 }
 
-/* ===== Page Layout ===== */
+/* PAGE LAYOUT */
 header,
 main,
 footer {
@@ -29,14 +29,14 @@ footer {
     margin: 0 auto;
 }
 
-/* ===== Headings ===== */
+/* HEADINGS */
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* ===== Basic Elements ===== */
+/* BASIC ELEMENTS */
 nav,
 p,
 section,
@@ -45,21 +45,20 @@ article {
     padding: 8px;
 }
 
-/* ===== Header ===== */
+/* HEADER */
 header {
     background-color: var(--primary-color);
     color: var(--accent2-color);
-    padding: 20px 0;
 }
 
 header img {
-    max-width: 100px;
+    width: 100px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* ===== Hero Section ===== */
+/* HERO SECTION - REQUIRED RULES */
 .hero {
     position: relative;
 }
@@ -70,7 +69,6 @@ header img {
     height: auto;
 }
 
-/* Hero Heading */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -81,12 +79,10 @@ header img {
     color: white;
 }
 
-/* Hero Article */
 .hero article {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    width: 300px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 16px;
 }
@@ -97,7 +93,7 @@ header img {
     margin-left: 16px;
 }
 
-/* ===== Footer ===== */
+/* FOOTER */
 footer {
     background-color: var(--primary-color);
     color: var(--accent2-color);
@@ -105,7 +101,7 @@ footer {
     text-align: center;
 }
 
-/* Social Media Links */
+/* SOCIAL MEDIA - REQUIRED RULE */
 .socialmedia a {
     text-decoration: none;
 }
@@ -114,9 +110,4 @@ footer {
     width: 30px;
     height: 30px;
     margin: 0 8px;
-    transition: transform 0.2s;
-}
-
-.socialmedia img:hover {
-    transform: scale(1.1);
 }
