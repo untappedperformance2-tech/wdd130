@@ -116,7 +116,7 @@ footer {
 /* Social Media Links */
 .socialmedia a {
     text-decoration: none;
-    /* Remove underline from social media links */
+    /* This is REQUIRED by the audit */
 }
 
 .socialmedia img {
