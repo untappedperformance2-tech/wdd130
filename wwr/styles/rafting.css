@@ -8,10 +8,6 @@
     --body-font: Arial, sans-serif;
 }
 
-head {
-    <link rel="stylesheet" href="styles/rafting.css" >
-}
-
 /* UNIVERSAL SELECTOR RESET */
 * {
     margin: 0;
