@@ -48,7 +48,7 @@ article {
 /* HEADER */
 header {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--secondary-color);
 }
 
 header img {
