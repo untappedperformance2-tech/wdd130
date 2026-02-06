@@ -2,8 +2,8 @@
 :root {
     --primary-color: #396e94;
     --secondary-color: #e7c24f;
-    --accent1-color: green;
-    --accent2-color: red;
+    --accent1-color: #90EE90;
+    --accent2-color: #ff6b6b;
     --heading-font: "Times New Roman", serif;
     --body-font: Arial, sans-serif;
 }
@@ -115,6 +115,7 @@ footer {
     color: white;
     padding: 2rem;
     margin-top: 2rem;
+    border-top: 3px solid var(--accent2-color);
 }
 
 .footer-content {
