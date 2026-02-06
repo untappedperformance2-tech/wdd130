@@ -52,16 +52,6 @@ aside {
     /* Required for absolute positioning of h2 */
 }
 
-main img {
-    float: right;
-    /* Float profile image to the right */
-    width: 150px;
-    height: auto;
-    border: 1px solid var(--img-border-color);
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-}
-
 aside h2 {
     position: absolute;
     /* For overlay */
@@ -75,24 +65,49 @@ aside h2 {
 
 nav {
     background-color: var(--nav-background);
-    padding: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav a {
     color: var(--link-color);
     display: block;
-    padding: 20px;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    /* shorthand for white */
 }
 
 h1 {
     color: var(--main-color);
+    border-bottom: 1px solid #000;
+    /* Added bottom border */
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
 }
 
 main {
-    max-width: 840px;
+    grid-column: 2/3;
+    margin: 1rem;
 }
 
 main img {
+    float: right;
+    /* Float profile image to the right */
     width: 150px;
     height: auto;
     border: 1px solid var(--img-border-color);
@@ -101,26 +116,15 @@ main img {
 }
 
 aside {
-    width: 20em;
-    margin: 1em;
-    border: 1px solid var(--aside-border-color);
-    padding: 1em;
-    background-color: var(--aside-background);
-    color: #333;
-    text-align: center;
+    width: 20rem;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 aside img {
     width: 200px;
     height: auto;
-}
-
-img {
-    width: 150px;
-    height: auto;
-    border: 1px solid var(--img-border-color);
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
 }
 
 p {
