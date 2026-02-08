@@ -36,15 +36,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* BASIC ELEMENTS */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
 /* ===== HEADER WITH GRID LAYOUT ===== */
 header {
     display: grid;
@@ -52,19 +43,28 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background-color: #2a5c8a;
-    /* Blue background for good contrast */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 header * {
     color: white;
-    /* All text in header is white */
+    /* Move this here, before other rules */
 }
 
 header img {
     width: 100px;
     height: auto;
+}
+
+/* BASIC ELEMENTS */
+/* This comes AFTER header rule */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
 }
 
 /* ===== HERO SECTION ===== */
@@ -255,9 +255,4 @@ main {
     font-size: 0.9rem;
     color: var(--primary-color);
     font-weight: bold;
-}
-
-/* Add this at the end of your CSS */
-* {
-    outline: 1px solid red;
 }
