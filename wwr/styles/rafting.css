@@ -46,7 +46,7 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #2a5c8a;
+    background-color: white;
     max-width: 1200px;
     margin: 0 auto;
 }
