@@ -47,11 +47,6 @@ header {
     margin: 0 auto;
 }
 
-header * {
-    color: white;
-    /* Move this here, before other rules */
-}
-
 header img {
     width: 100px;
     height: auto;
@@ -65,6 +60,11 @@ section,
 article {
     margin: 16px;
     padding: 8px;
+}
+
+header * {
+    color: white;
+    /* Move this here, before other rules */
 }
 
 /* ===== HERO SECTION ===== */
