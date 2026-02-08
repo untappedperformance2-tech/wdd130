@@ -64,7 +64,6 @@ article {
 
 header * {
     color: white;
-    /* Move this here, before other rules */
 }
 
 /* ===== HERO SECTION ===== */
