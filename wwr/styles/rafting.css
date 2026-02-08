@@ -18,7 +18,7 @@
 /* BODY */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: #333333;
 }
 
 /* PAGE LAYOUT */
@@ -255,4 +255,9 @@ main {
     font-size: 0.9rem;
     color: var(--primary-color);
     font-weight: bold;
+}
+
+/* Add this at the end of your CSS */
+* {
+    outline: 1px solid red;
 }
