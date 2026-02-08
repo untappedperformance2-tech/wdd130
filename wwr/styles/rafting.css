@@ -18,7 +18,7 @@
 /* BODY */
 body {
     font-family: var(--body-font);
-    color: #333333;
+    color: var(--secondary-color);
 }
 
 /* PAGE LAYOUT */
@@ -173,7 +173,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--accent1-color);
     /* Light hover effect */
     color: white;
     /* Keep text white on hover */
