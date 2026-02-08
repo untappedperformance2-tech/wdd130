@@ -48,7 +48,7 @@ header {
 }
 
 header * {
-    color: white !important;
+    color: white;
     /* Move this here, before other rules */
 }
 
