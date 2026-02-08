@@ -15,6 +15,10 @@
     box-sizing: border-box;
 }
 
+header * {
+    color: white;
+}
+
 /* BODY */
 body {
     font-family: var(--body-font);
@@ -60,10 +64,6 @@ section,
 article {
     margin: 16px;
     padding: 8px;
-}
-
-header * {
-    color: white;
 }
 
 /* ===== HERO SECTION ===== */
