@@ -15,18 +15,13 @@
     box-sizing: border-box;
 }
 
-header * {
-    color: white;
-}
-
 /* BODY */
 body {
     font-family: var(--body-font);
     color: var(--secondary-color);
 }
 
-/* PAGE LAYOUT */
-header,
+/* PAGE LAYOUT - Maintaining requirements */
 main,
 footer {
     width: 840px;
@@ -47,6 +42,7 @@ header {
     align-items: center;
     padding: 1rem 2rem;
     background-color: white;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -54,16 +50,40 @@ header {
 header img {
     width: 100px;
     height: auto;
+    display: block;
 }
 
 /* BASIC ELEMENTS */
-/* This comes AFTER header rule */
 nav,
 p,
 section,
 article {
     margin: 16px;
     padding: 8px;
+}
+
+/* ===== NAVIGATION WITH FLEX LAYOUT ===== */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    background-color: green;
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: white;
 }
 
 /* ===== HERO SECTION ===== */
@@ -112,80 +132,6 @@ article {
 .hero article p {
     margin: 0;
     font-style: italic;
-}
-
-/* ===== FOOTER WITH SOCIAL MEDIA ===== */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 2rem;
-    margin-top: 2rem;
-    border-top: 3px solid var(--accent2-color);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer p {
-    margin: 0;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 1rem;
-}
-
-.socialmedia a {
-    display: inline-block;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s;
-}
-
-.socialmedia img:hover {
-    transform: scale(1.1);
-}
-
-/* ===== NAVIGATION WITH FLEX LAYOUT ===== */
-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    color: green;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    /* White text */
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    background-color: green;
-}
-
-nav a:hover {
-    background-color: var(--accent1-color);
-    /* Light hover effect */
-    color: white;
-    /* Keep text white on hover */
-}
-
-/* MAIN CONTENT */
-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
 }
 
 /* ===== HISTORY SECTION (2-column grid) ===== */
@@ -258,6 +204,47 @@ main {
     font-weight: bold;
 }
 
+/* ===== FOOTER WITH SOCIAL MEDIA ===== */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 3px solid var(--accent2-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialmedia a {
+    display: inline-block;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.1);
+}
+
 /* ===== CONTACT PAGE STYLES ===== */
 .contact-header {
     text-align: center;
@@ -327,6 +314,8 @@ main {
     height: 300px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: none;
+    /* Removes default iframe border */
 }
 
 .employee-profiles {
@@ -499,8 +488,26 @@ fieldset.form-group legend {
     transform: scale(0.98);
 }
 
-/* ===== RESPONSIVE DESIGN FOR CONTACT PAGE ===== */
-@media screen and (max-width: 768px) {
+/* ===== RESPONSIVE DESIGN ===== */
+@media screen and (max-width: 840px) {
+
+    main,
+    footer {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .info-container {
         grid-template-columns: 1fr;
     }
@@ -523,6 +530,14 @@ fieldset.form-group legend {
     .contact-form {
         padding: 1.5rem;
     }
+
+    .history {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -536,5 +551,9 @@ fieldset.form-group legend {
 
     .submit-button {
         padding: 0.75rem 1.5rem;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: 1fr;
     }
 }
