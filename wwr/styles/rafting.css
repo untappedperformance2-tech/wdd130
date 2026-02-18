@@ -5,28 +5,40 @@
     --accent1-color: rgb(162, 0, 255);
     --accent2-color: #ff6b6b;
     --heading-font: "Times New Roman", serif;
-    --body-font: Arial, sans-serif;
-    --light-bg: #f5f9ff;
-    --white: #ffffff;
-    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --border-radius: 8px;
-    --transition: 0.3s ease;
+    --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* UNIVERSAL RESET */
+/* UNIVERSAL SELECTOR RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BASE ELEMENTS */
+/* BODY STYLES */
 body {
     font-family: var(--body-font);
     color: var(--secondary-color);
+    line-height: 1.6;
 }
 
+/* PAGE LAYOUT - keeping same as other pages */
+main {
+    width: 840px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    width: 840px;
+    margin: 0 auto;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* HEADINGS */
 h1,
 h2,
 h3 {
@@ -34,25 +46,23 @@ h3 {
     color: var(--primary-color);
 }
 
-/* LAYOUT UTILITIES */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.section-title {
-    text-align: center;
-    margin-bottom: 2rem;
+h2 {
+    font-size: 1.5em;
+    margin: 20px 0 15px;
 }
 
-/* HEADER */
+/* HEADER - same as other pages */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white);
+    background-color: white;
+    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -62,7 +72,7 @@ header img {
     height: auto;
 }
 
-/* NAVIGATION */
+/* NAVIGATION - same as other pages */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -71,171 +81,133 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: var(--white);
-    font-weight: bold;
+    color: white;
+    background-color: green;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    background-color: green;
-    transition: background-color var(--transition);
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: var(--accent1-color);
 }
 
-/* HERO SECTION */
-.hero {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* ===== CONTACT PAGE SPECIFIC STYLES ===== */
 
-.hero img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    display: block;
-}
-
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
+/* Contact Header Section */
+.contact-header {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: var(--white);
-    padding: 1rem;
+    padding: 2rem 1rem;
+    background-color: #f5f9ff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    max-width: 300px;
-}
-
-.hero article img {
-    float: right;
-    width: 120px;
-    margin-left: 1rem;
-    border-radius: 4px;
-}
-
-/* HISTORY SECTION */
-.history {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-}
-
-.history h2 {
-    grid-column: 1 / -1;
-}
-
-.history img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-}
-
-/* ADVENTURE GALLERY */
-.adventure-gallery {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-}
-
-.adventure-gallery img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 6px;
-    border: 2px solid var(--primary-color);
-}
-
-.adventure-gallery figcaption {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+.contact-header h1 {
     color: var(--primary-color);
-    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+}
+
+/* Company Information Section */
+.company-info {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.company-info h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* 2-column layout for info and map */
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+/* Contact Details Box */
+.contact-details {
+    background-color: #f5f9ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.contact-details address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+.contact-details strong {
+    color: var(--primary-color);
+    display: inline-block;
+    width: 70px;
+}
+
+/* Google Map - removed border:0 style */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Employee Profiles Section */
+.employee-profiles {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
     text-align: center;
 }
 
-/* FOOTER */
-footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 2rem;
-    margin-top: 2rem;
-    border-top: 3px solid var(--accent2-color);
+.employee-profiles h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-footer p {
-    color: var(--white);
-}
-
-.socialmedia {
-    display: flex;
-    gap: 1rem;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
-    transition: transform var(--transition);
-}
-
-.socialmedia img:hover {
-    transform: scale(1.1);
-}
-
-/* CARD STYLES (reusable for trips, profiles, etc.) */
-.card-grid {
+/* 3-column grid for employee profiles */
+.profile-gallery {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-.card {
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.card img {
-    width: 100%;
-    object-fit: cover;
-}
-
-/* PROFILE CARDS (circular images) */
-.profile-card {
-    text-align: center;
+.profile-gallery figure {
+    margin: 0;
     padding: 1.5rem 1rem 1rem;
     background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.profile-card img {
+.profile-gallery figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-gallery img {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -244,16 +216,36 @@ footer p {
     border: 3px solid var(--primary-color);
 }
 
-/* FORM STYLES */
-.form-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    background-color: var(--light-bg);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
+.profile-gallery figcaption h3 {
+    color: var(--primary-color);
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.2rem;
 }
 
+.profile-gallery figcaption p {
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contact Form Section */
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background-color: #f5f9ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Form Groups */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -265,6 +257,7 @@ footer p {
     color: var(--primary-color);
 }
 
+/* Input Styles */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -273,22 +266,31 @@ footer p {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-    transition: border-color var(--transition), box-shadow var(--transition);
+    font-family: var(--body-font);
 }
 
-.form-group input:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(57, 110, 148, 0.2);
+    box-shadow: 0 0 5px rgba(57, 110, 148, 0.3);
 }
 
+/* Fieldset for Radio Buttons */
 fieldset.form-group {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 4px;
 }
 
+fieldset.form-group legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+/* Radio Button Group */
 .radio-group {
     display: flex;
     flex-wrap: wrap;
@@ -296,153 +298,94 @@ fieldset.form-group {
     padding: 0.5rem 0;
 }
 
+.radio-group input[type="radio"] {
+    margin-right: 0.25rem;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+/* Newsletter Checkbox */
 .checkbox-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin: 1rem 0;
 }
 
-/* BUTTON STYLES */
-.btn {
-    display: inline-block;
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    display: inline;
+    margin-bottom: 0;
+    font-weight: normal;
+    color: var(--secondary-color);
+}
+
+/* Submit Button - styled to stand out */
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
     border: none;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
-    text-decoration: none;
-    transition: background-color var(--transition), transform 0.2s ease;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-primary:hover {
+.submit-button:hover {
     background-color: var(--accent1-color);
-    transform: scale(1.02);
 }
 
-.btn-accent {
-    background-color: var(--accent2-color);
-    color: var(--white);
-    border-radius: 50px;
-    padding: 1rem 2.5rem;
-    font-size: 1.2rem;
+/* ===== FOOTER - same as other pages ===== */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.btn-accent:hover {
-    background-color: #ff5252;
-    transform: scale(1.05);
+footer p {
+    color: white;
+    margin: 0;
 }
 
-.btn-submit {
-    width: 100%;
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+.socialmedia {
+    display: flex;
+    gap: 1rem;
 }
 
-.btn-submit:active {
-    transform: scale(0.98);
+.socialmedia img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
 }
 
-/* PAGE HEADERS */
-.page-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: var(--light-bg);
-    margin-bottom: 2rem;
-    border-radius: var(--border-radius);
+.socialmedia img:hover {
+    transform: scale(1.1);
 }
 
-/* CTA SECTIONS */
-.cta-section {
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(rgba(57, 110, 148, 0.9), rgba(57, 110, 148, 0.9)), url('../images/rafting-cta-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
-    margin: 3rem 0;
-    border-radius: var(--border-radius);
-}
-
-.cta-section h2,
-.cta-section p {
-    color: var(--white);
-}
-
-.cta-section p {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-}
-
-/* COMPANY INFO */
-.info-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.contact-details {
-    background-color: var(--light-bg);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-}
-
-.contact-details address {
-    font-style: normal;
-    line-height: 1.8;
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 300px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
-    border: none;
-}
-
-/* TRIPS TABLE */
-.trips-table-section {
-    background-color: var(--light-bg);
-    border-radius: var(--border-radius);
-    padding: 2rem;
-}
-
-.trips-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-}
-
-.trips-table thead {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.trips-table th,
-.trips-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-}
-
-.trips-table tbody tr:hover {
-    background-color: var(--light-bg);
-}
-
-/* RESPONSIVE DESIGN */
+/* ===== RESPONSIVE DESIGN ===== */
 @media screen and (max-width: 840px) {
+
+    main,
+    footer {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
     header {
         grid-template-columns: 1fr;
         text-align: center;
@@ -454,84 +397,72 @@ fieldset.form-group {
         flex-wrap: wrap;
     }
 
+    /* Contact page responsive */
     .info-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .history {
+    .profile-gallery {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
-    .adventure-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .card-grid,
-    .trips-grid {
-        grid-template-columns: 1fr !important;
-    }
-
-    .trips-table {
-        display: block;
-        overflow-x: auto;
+    .profile-gallery img {
+        max-width: 250px;
+        margin: 0 auto;
     }
 
     .radio-group {
         flex-direction: column;
         gap: 0.5rem;
     }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .adventure-gallery {
-        grid-template-columns: 1fr;
+    .contact-header {
+        padding: 1.5rem 1rem;
     }
 
-    .form-container {
+    .contact-form {
         padding: 1rem;
+    }
+
+    .submit-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .contact-details strong {
+        width: auto;
+        display: inline;
+        margin-right: 5px;
+    }
+
+    .contact-details p {
+        margin: 0.75rem 0;
     }
 }
 
-/* UTILITY CLASSES */
+/* I think I need a clearfix somewhere */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Utility class for text alignment */
 .text-center {
     text-align: center;
 }
 
-.mb-1 {
-    margin-bottom: 0.5rem;
-}
-
-.mb-2 {
-    margin-bottom: 1rem;
-}
-
-.mb-3 {
-    margin-bottom: 1.5rem;
-}
-
-.mb-4 {
-    margin-bottom: 2rem;
-}
-
-.mt-3 {
-    margin-top: 1.5rem;
-}
-
-.mt-4 {
-    margin-top: 2rem;
-}
-
-.p-2 {
-    padding: 1rem;
-}
-
-.p-3 {
-    padding: 1.5rem;
-}
-
-.p-4 {
-    padding: 2rem;
+/* Making sure form elements look good on all browsers */
+input,
+textarea,
+button {
+    font-family: inherit;
 }
