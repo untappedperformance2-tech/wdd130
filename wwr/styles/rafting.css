@@ -6,6 +6,7 @@
     --accent2-color: #ff6b6b;
     --heading-font: "Times New Roman", serif;
     --body-font: Arial, Helvetica, sans-serif;
+    --light-bg: #f5f9ff;
 }
 
 /* UNIVERSAL SELECTOR RESET */
@@ -22,7 +23,7 @@ body {
     line-height: 1.6;
 }
 
-/* PAGE LAYOUT - keeping same as other pages */
+/* PAGE LAYOUT - keeping consistent across all pages */
 main {
     width: 840px;
     margin: 0 auto;
@@ -47,16 +48,21 @@ h3 {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin: 20px 0 15px;
+    font-size: 2em;
+    margin: 25px 0 20px;
 }
 
-/* HEADER - same as other pages */
+h3 {
+    font-size: 1.3em;
+    margin: 15px 0 10px;
+}
+
+/* HEADER - same across all pages */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -65,6 +71,7 @@ header {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    border-bottom: 2px solid #eee;
 }
 
 header img {
@@ -72,7 +79,7 @@ header img {
     height: auto;
 }
 
-/* NAVIGATION - same as other pages */
+/* NAVIGATION - same across all pages */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -93,41 +100,376 @@ nav a:hover {
     background-color: var(--accent1-color);
 }
 
-/* ===== CONTACT PAGE SPECIFIC STYLES ===== */
-
-/* Contact Header Section */
-.contact-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #f5f9ff;
-    margin-bottom: 2rem;
-    border-radius: 8px;
+/* ===== HERO SECTION (used on multiple pages) ===== */
+.hero {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.contact-header h1 {
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 3em;
+    white-space: nowrap;
+}
+
+/* ===== HOME PAGE STYLES (index.html) ===== */
+
+/* Newsletter Section */
+.newsletter {
+    background-color: var(--light-bg);
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.contact-header p {
-    max-width: 600px;
-    margin: 0 auto;
-    color: var(--secondary-color);
+.newsletter p {
+    margin-bottom: 2rem;
+    font-size: 1.1em;
 }
 
-/* Company Information Section */
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.newsletter-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.subscribe-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: var(--accent1-color);
+}
+
+/* Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(57, 110, 148, 0.9), rgba(57, 110, 148, 0.9));
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 3rem 0;
+    border-radius: 8px;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 2.2em;
+}
+
+.cta-section p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent2-color);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+/* Purpose Grid Section - using CSS Grid */
+.purpose-grid {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.purpose-grid h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.grid-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.grid-item p {
+    color: #555;
+}
+
+/* ===== TRIPS PAGE STYLES (trips.html) ===== */
+
+/* Trips Header */
+.trips-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--light-bg);
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.trips-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Trips Call to Action */
+.trips-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 2rem 0;
+    border-radius: 8px;
+}
+
+.trips-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.trips-cta p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1em;
+    color: white;
+}
+
+.trips-cta .cta-button {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid white;
+}
+
+.trips-cta .cta-button:hover {
+    background-color: var(--accent2-color);
+    color: white;
+    border-color: var(--accent2-color);
+}
+
+/* Featured Trips Grid */
+.featured-trips {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.featured-trips h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.trip-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.trip-card h3 {
+    color: var(--primary-color);
+    margin: 1rem 1rem 0.5rem;
+    font-size: 1.4em;
+}
+
+.trip-card .difficulty {
+    color: var(--accent1-color);
+    font-weight: bold;
+    margin: 0 1rem 0.25rem;
+    font-size: 1.1em;
+}
+
+.trip-card .duration,
+.trip-card .price {
+    margin: 0.25rem 1rem;
+    color: #444;
+    font-weight: bold;
+}
+
+.trip-card p {
+    margin: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.trip-card ul {
+    margin: 1rem;
+    padding-left: 1.5rem;
+}
+
+.trip-card li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* Trips Table Section */
+.trips-table-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+}
+
+.trips-table-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trips-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.trips-table th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.trips-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.trips-table tbody tr:hover {
+    background-color: var(--light-bg);
+}
+
+.trips-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== CONTACT PAGE STYLES (keeping from before) ===== */
+.contact-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--light-bg);
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
 .company-info {
     max-width: 1200px;
     margin: 0 auto 3rem;
     padding: 0 1rem;
 }
 
-.company-info h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-/* 2-column layout for info and map */
 .info-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -135,19 +477,11 @@ nav a:hover {
     margin-top: 1.5rem;
 }
 
-/* Contact Details Box */
 .contact-details {
-    background-color: #f5f9ff;
+    background-color: var(--light-bg);
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contact-details h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 0.5rem;
 }
 
 .contact-details address {
@@ -155,18 +489,6 @@ nav a:hover {
     line-height: 1.8;
 }
 
-.contact-details p {
-    margin: 0.5rem 0;
-    padding: 0;
-}
-
-.contact-details strong {
-    color: var(--primary-color);
-    display: inline-block;
-    width: 70px;
-}
-
-/* Google Map - removed border:0 style */
 .map-container iframe {
     width: 100%;
     height: 300px;
@@ -174,7 +496,7 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Employee Profiles Section */
+/* Employee Profiles */
 .employee-profiles {
     max-width: 1200px;
     margin: 0 auto 3rem;
@@ -182,12 +504,6 @@ nav a:hover {
     text-align: center;
 }
 
-.employee-profiles h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-/* 3-column grid for employee profiles */
 .profile-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -199,12 +515,6 @@ nav a:hover {
     padding: 1.5rem 1rem 1rem;
     background-color: #f9f9f9;
     border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.profile-gallery figure:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-gallery img {
@@ -216,36 +526,16 @@ nav a:hover {
     border: 3px solid var(--primary-color);
 }
 
-.profile-gallery figcaption h3 {
-    color: var(--primary-color);
-    margin: 0.5rem 0 0.25rem;
-    font-size: 1.2rem;
-}
-
-.profile-gallery figcaption p {
-    color: #666;
-    font-style: italic;
-    margin: 0;
-    padding: 0;
-}
-
-/* Contact Form Section */
+/* Contact Form */
 .contact-form {
     max-width: 800px;
     margin: 0 auto 3rem;
     padding: 2rem;
-    background-color: #f5f9ff;
+    background-color: var(--light-bg);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form h2 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-/* Form Groups */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -257,7 +547,6 @@ nav a:hover {
     color: var(--primary-color);
 }
 
-/* Input Styles */
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -266,31 +555,14 @@ nav a:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-    font-family: var(--body-font);
 }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 5px rgba(57, 110, 148, 0.3);
-}
-
-/* Fieldset for Radio Buttons */
 fieldset.form-group {
     border: 1px solid #ccc;
     padding: 1rem;
     border-radius: 4px;
 }
 
-fieldset.form-group legend {
-    font-weight: bold;
-    color: var(--primary-color);
-    padding: 0 0.5rem;
-}
-
-/* Radio Button Group */
 .radio-group {
     display: flex;
     flex-wrap: wrap;
@@ -298,37 +570,12 @@ fieldset.form-group legend {
     padding: 0.5rem 0;
 }
 
-.radio-group input[type="radio"] {
-    margin-right: 0.25rem;
-}
-
-.radio-group label {
-    display: inline;
-    font-weight: normal;
-    color: var(--secondary-color);
-}
-
-/* Newsletter Checkbox */
 .checkbox-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin: 1rem 0;
 }
 
-.checkbox-group input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-}
-
-.checkbox-group label {
-    display: inline;
-    margin-bottom: 0;
-    font-weight: normal;
-    color: var(--secondary-color);
-}
-
-/* Submit Button - styled to stand out */
 .submit-button {
     background-color: var(--primary-color);
     color: white;
@@ -340,21 +587,20 @@ fieldset.form-group legend {
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .submit-button:hover {
     background-color: var(--accent1-color);
 }
 
-/* ===== FOOTER - same as other pages ===== */
+/* ===== FOOTER - same across all pages ===== */
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 footer p {
@@ -397,20 +643,23 @@ footer p {
         flex-wrap: wrap;
     }
 
+    /* Home page responsive */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Trips page responsive */
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+
     /* Contact page responsive */
     .info-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .profile-gallery {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .profile-gallery img {
-        max-width: 250px;
-        margin: 0 auto;
     }
 
     .radio-group {
@@ -418,51 +667,70 @@ footer p {
         gap: 0.5rem;
     }
 
-    .contact-form {
-        padding: 1.5rem;
+    .hero h1 {
+        font-size: 2em;
+        white-space: normal;
+        padding: 15px 25px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .contact-header {
-        padding: 1.5rem 1rem;
+    .hero h1 {
+        font-size: 1.5em;
+        padding: 10px 15px;
+    }
+
+    .cta-section {
+        padding: 2rem 1rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .grid-item img {
+        height: 200px;
+    }
+
+    .trip-card img {
+        height: 180px;
     }
 
     .contact-form {
         padding: 1rem;
     }
+}
 
-    .submit-button {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-    }
-
-    .contact-details strong {
-        width: auto;
-        display: inline;
-        margin-right: 5px;
-    }
-
-    .contact-details p {
-        margin: 0.75rem 0;
+/* Make table responsive on smaller screens */
+@media screen and (max-width: 768px) {
+    .trips-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 }
 
-/* I think I need a clearfix somewhere */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Utility class for text alignment */
+/* Utility classes I might need */
 .text-center {
     text-align: center;
 }
 
-/* Making sure form elements look good on all browsers */
-input,
-textarea,
-button {
-    font-family: inherit;
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+/* Not sure if I need this but keeping it */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

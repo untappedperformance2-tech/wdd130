@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitewater Rafting Adventures | Home</title>
+    <title>White Water Rafting | Home | Experience the Thrill</title>
     <meta name="description"
-      content="Experience the thrill of whitewater rafting with our expert guides. Book your adventure today and create memories that will last a lifetime." />
-    <meta name="author" content="Aaron Morris" />
+      content="Experience thrilling white water rafting adventures. Sign up for our newsletter, explore our exciting trips, and start your adventure today!">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
     <header>
-        <img src="images/rafting_logo.jpg" alt="Whitewater Rafting Company Logo">
+        <img src="images/logo.png" alt="White Water Rafting Logo">
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -23,63 +22,77 @@
     </header>
 
     <main>
-        <!-- Hero Section with Heading -->
+        <!-- Hero Section with heading -->
         <section class="hero">
-            <img src="images/rafting-hero.jpg" alt="Whitewater rafting adventure">
-            <h1>Experience the Thrill of the River</h1>
+            <img src="images/hero-home.jpg" alt="White water rafting adventure">
+            <h1>Experience the Thrill of White Water Rafting</h1>
         </section>
 
-        <!-- Newsletter Sign-up Form -->
+        <!-- Newsletter Sign Up Form -->
         <section class="newsletter">
-            <h2>Stay Updated on Adventures</h2>
-            <p>Sign up for our newsletter to receive special offers and rafting tips!</p>
-            <form action="#" method="post" class="newsletter-form">
+            <h2>Join Our Adventure Newsletter</h2>
+            <p>Get updates on new trips, special offers, and rafting tips straight to your inbox!
+            </p>
+
+            <form class="newsletter-form">
                 <div class="form-group">
-                    <label for="newsletter-name">Your Name:</label>
-                    <input type="text" id="newsletter-name" name="name" required>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="newsletter-email">Your Email:</label>
-                    <input type="email" id="newsletter-email" name="email" required>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com"
+                      required>
                 </div>
-                <button type="submit" class="subscribe-button">Subscribe Now</button>
+
+                <button type="submit" class="subscribe-button">Subscribe to Newsletter</button>
             </form>
         </section>
 
-        <!-- Call to Action -->
+        <!-- Call to Action (links to trips.html) -->
         <section class="cta-section">
             <h2>Ready for Your Next Adventure?</h2>
-            <p>Check out our exciting rafting trips and book your experience today!</p>
-            <a href="trips.html" class="cta-button">View Our Trips</a>
+            <p>Check out our exciting rafting trips and book your experience today! We have trips
+                for all skill levels.</p>
+            <a href="trips.html" class="cta-button">View Our Trips & Book Now!</a>
         </section>
 
-        <!-- CSS Grid Layout with Images and Content -->
+        <!-- Purpose Grid Section - using CSS Grid -->
         <section class="purpose-grid">
-            <h2>Why Choose Whitewater Rafting Adventures?</h2>
+            <h2>Why Choose White Water Rafting?</h2>
+
             <div class="grid-container">
                 <div class="grid-item">
-                    <img src="images/expert-guides.jpg" alt="Expert rafting guides">
+                    <img src="images/purpose-1.jpg" alt="Family rafting adventure">
+                    <h3>Fun for Everyone</h3>
+                    <p>Whether you're a first-time rafter or an experienced adventurer, we have
+                        trips suitable for all skill levels. Our professional guides ensure everyone
+                        has a safe and exciting experience.</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="images/purpose-2.jpg" alt="Scenic river views">
+                    <h3>Breathtaking Scenery</h3>
+                    <p>Experience nature like never before! Our rafting trips take you through some
+                        of the most beautiful rivers and canyons, with opportunities to spot
+                        wildlife and enjoy stunning views.</p>
+                </div>
+
+                <div class="grid-item">
+                    <img src="images/purpose-3.jpg" alt="Professional rafting guide">
                     <h3>Expert Guides</h3>
                     <p>Our certified guides have years of experience and are passionate about
-                        sharing the thrill of rafting safely.</p>
+                        rafting. They'll teach you everything you need to know and ensure your
+                        safety while you have the time of your life.</p>
                 </div>
+
                 <div class="grid-item">
-                    <img src="images/scenic-routes.jpg" alt="Scenic river routes">
-                    <h3>Scenic Routes</h3>
-                    <p>Experience breathtaking views as you navigate through some of the most
-                        beautiful rivers in the region.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/safety-gear.jpg" alt="Top quality safety equipment">
-                    <h3>Top Safety Standards</h3>
-                    <p>We provide high-quality safety equipment and prioritize your well-being
-                        throughout your adventure.</p>
-                </div>
-                <div class="grid-item">
-                    <img src="images/family-fun.jpg" alt="Family rafting adventure">
-                    <h3>Fun for All Levels</h3>
-                    <p>From beginners to experienced rafters, we have trips suitable for every skill
-                        level and age.</p>
+                    <img src="images/purpose-4.jpg" alt="Group rafting trip">
+                    <h3>Perfect for Groups</h3>
+                    <p>Looking for a team-building activity or a fun outing with friends? Our group
+                        packages are perfect for corporate events, family reunions, and special
+                        celebrations.</p>
                 </div>
             </div>
         </section>
@@ -87,14 +100,17 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 Whitewater Rafting Adventures | Aaron Morris</p>
+            <p>&copy; 2024 White Water Rafting. All rights reserved.</p>
             <nav class="socialmedia">
-                <a href="https://facebook.com"><img src="images/facebook-icon.png"
-                      alt="Visit our Facebook page"></a>
-                <a href="https://twitter.com"><img src="images/twitter.png"
-                      alt="Follow us on Twitter"></a>
-                <a href="https://instagram.com"><img src="images/instagram.png"
-                      alt="Follow us on Instagram"></a>
+                <a href="https://facebook.com">
+                    <img src="images/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/twitter-icon.png" alt="Twitter">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram-icon.png" alt="Instagram">
+                </a>
             </nav>
         </div>
     </footer>
